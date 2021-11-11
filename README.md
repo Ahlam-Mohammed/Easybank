@@ -4,8 +4,8 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Ahlam-Mohammed/Easybank)
-- Live Site URL: [Add live site URL here](https://ahlam-mohammed.github.io/Easybank/)
+- Solution URL: [responsive-landing-page-using-css-grid](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-Zby1p5KyJ)
+- Live Site URL: [Easybank](https://ahlam-mohammed.github.io/Easybank/)
 
 ### Built with
 
