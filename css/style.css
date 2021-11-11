@@ -2,6 +2,7 @@
     --main-font: 'Public Sans', sans-serif;
     --main-color: hsl(233, 26%, 24%);
     --secondary-color:hsl(233, 8%, 62%);
+    --linear-color: linear-gradient(60deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
 * {
     padding: 0;
@@ -13,10 +14,11 @@ body {
 }
 ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
 }
 a {
     text-decoration: none;
+    font-family: var(--main-font);
 }
 p {
    font-size: 14.5px;
@@ -41,14 +43,37 @@ header nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+header nav .container .menu ul {
+    display: flex;
 }
 header nav .container .menu ul li {
     font-family: var(--main-font);
     font-weight: 300;
     margin-left: 30px;
     font-size: 14px;
+}
+header nav .container .menu ul li a {
+    color: var(--secondary-color);
+    position: relative;
+}
+header nav .container .menu ul li a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 54px;
+    background: var(--linear-color);
+    left: -4%;
+    bottom: -152%;
+    opacity: 0;
+}
+header nav .container .menu ul li a:hover {
+    color: var(--main-color);
+}
+header nav .container .menu ul li a:hover::before {
+    opacity: 1;
 }
 header nav .container .menu-mobile {
     display: none;
@@ -64,6 +89,7 @@ header .menu-mobile ul {
     border-radius: 8px;
     display: none;
     z-index: 1;
+    box-shadow: 0px 20px 20px 20px #00000033;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -86,11 +112,14 @@ header .menu-mobile ul li {
     font-weight: 300;
     border: 0;
     border-radius:50px;
-    background: hsl(136, 65%, 51%);
+    background: var(--linear-color);
     -webkit-border-radius:50px;
     -moz-border-radius:50px;
     -ms-border-radius:50px;
     -o-border-radius:50px;
+}
+.request-invite:hover {
+    background: linear-gradient(60deg, hsl(136deg 65% 51% / 62%), hsl(192deg 70% 51% / 72%));
 }
 /*--- landing ---*/
 .landing {
@@ -123,8 +152,8 @@ header .menu-mobile ul li {
 }
 .landing .mockups img {
     position: absolute;
-    width: 95%;
-    top: -104px;
+    width: 90%;
+    top: -159px;
     left: 164px;
 }
 /*--- Services Section ---*/
@@ -198,8 +227,14 @@ header .menu-mobile ul li {
     font-weight: 300;
     color: var(--secondary-color);
 }
-.article .container .card .details h5 {
+.article .container .card .details a {
     padding: 15px 0;
+    display: block;
+    font-size: 15px;
+    color: var(--main-color);
+}
+.article .container .card .details a:hover {
+    color: hsl(192, 70%, 51%);
 }
 .article .container .card .details p {
     font-size: 12px;
@@ -210,20 +245,51 @@ header .menu-mobile ul li {
 /*--- Footer ---*/
 footer {
     background-color: var(--main-color);
-    height: 150px;
+    height: 200px;
+    padding: 35px 0 0 0;
 }
 footer .container {
     display: grid;
-    grid-template-columns: repeat(4,auto);
-    align-items: center;
-    justify-items: center;
-    justify-content: space-between;
-    height: inherit;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px
+}
+footer .container article h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-bottom: 50px
+}
+footer .container article ul li {
+    padding-bottom: 20px;
+}
+footer .container article ul li a:hover {
+    color: hsl(192, 70%, 51%);
+}
+footer .container article:first-child  ul {
+    display: flex;
+}
+footer .container article:first-child  ul li {
+    margin-right: 14px;
+}
+footer .container article ul li a {
+    color: hsl(0, 0%, 100%);
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 14px;
 }
 footer .container article:last-child {
-    grid-column: slep 4;
-}
-footer .container article {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+}
+footer .container article:last-child .request-invite {
+    margin-bottom: 30px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: #ffffff5e;
+    margin-top: 10px; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
 }

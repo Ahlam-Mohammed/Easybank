@@ -1,5 +1,5 @@
 /* Small Screen */
-@media screen and (max-width: 412px) and (min-width:302px) {
+@media screen and (max-width: 568px) and (min-width:302px) {
   .container {
     width: 100%;
   }
@@ -88,10 +88,97 @@
   .article .container .card .details p {
     font-size: 13px;
   }
+  footer {
+    height: auto;
+    padding: 35px 0 20px 0;
+  }
+  footer .container {
+    gap: 0;
+    text-align: center;
+  }
+  footer .container article:first-child ul {
+    justify-content: center;
+  }
+  footer .container article:last-child {
+    align-items: center;
+  }
 }
 /* Medium Screen */
 @media screen and (max-width: 768px) and (min-width: 568px) {
-  
+  p {
+    font-size: 12.5px !important;
+  }
+  a {
+    font-size: 12px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .request-invite {
+    padding: 8px 15px;
+  }
+  header nav .container {
+    width: 100% !important;
+  }
+  .landing {
+    height: 550px;
+  }
+  .landing .intro-text ,
+  .landing .mockups {
+    width: 50%;
+  }
+  .landing .mockups {
+    background-position: 7% 54%;
+  }
+  .landing .mockups img {
+    width: 120%;
+    top: -60px;
+    left: 5px;
+  }
+  .landing .intro-text h1 {
+    font-size: 35px;
+  }
+  .services .container, .article .container {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .container .title {
+    grid-column: span 2;
+  }
+  .article .container .card .image-article {
+    height: 120px;
+  }
+  .article .container .card .details {
+    padding: 15px 6px 15px 15px;
+    height: 165px;
+    overflow: hidden;
+  }
+  .article .container .card .details a ,
+  footer .container article ul li a {
+    font-size: 12px;
+  }
+  .article .container .card .details p {
+    font-size: 11px !important;
+  }
+  footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0;
+  }
+  footer .container article h1 {
+    font-size: 20px;
+  }
+  footer .container article img {
+    width: 70%;
+  }
+  footer .container article:first-child ul li {
+    margin-right: 5px
+  }
+  footer .container article p {
+    font-size: 10px !important;
+  }
 }
 /*--- Big Screen ----*/
 @media screen and (max-width: 1920px) and (min-width: 1200px) {
