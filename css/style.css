@@ -55,7 +55,7 @@ header nav .container .menu ul li {
     margin-left: 30px;
     font-size: 14px;
 }
-header nav .container .menu ul li a {
+header nav .container ul li a {
     color: var(--secondary-color);
     position: relative;
 }
@@ -69,7 +69,7 @@ header nav .container .menu ul li a::before {
     bottom: -152%;
     opacity: 0;
 }
-header nav .container .menu ul li a:hover {
+header nav .container ul li a:hover {
     color: var(--main-color);
 }
 header nav .container .menu ul li a:hover::before {
