@@ -52,6 +52,9 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .services .container .srv-box p {
+    padding-right: 0;
+  }
   .container .title {
     grid-column: auto;
   }
