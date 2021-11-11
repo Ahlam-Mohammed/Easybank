@@ -1,0 +1,229 @@
+:root {
+    --main-font: 'Public Sans', sans-serif;
+    --main-color: hsl(233, 26%, 24%);
+    --secondary-color:hsl(233, 8%, 62%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+p {
+   font-size: 14.5px;
+   font-family: var(--main-font);
+   font-weight: 400;
+   line-height: 1.6;
+   color: var(--secondary-color);
+}
+h1 , h5 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*--- Header ---  */
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header nav .container .menu ul li {
+    font-family: var(--main-font);
+    font-weight: 300;
+    margin-left: 30px;
+    font-size: 14px;
+}
+header nav .container .menu-mobile {
+    display: none;
+    position: relative;
+}
+header .menu-mobile ul {
+    padding: 30px;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    right: 50%;
+    min-width: 325px;
+    top: calc(100% + 30px);
+    border-radius: 8px;
+    display: none;
+    z-index: 1;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+header .menu-mobile:hover ul {
+    display: block;
+}
+header .menu-mobile ul li {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+.request-invite {
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: 300;
+    border: 0;
+    border-radius:50px;
+    background: hsl(136, 65%, 51%);
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    -ms-border-radius:50px;
+    -o-border-radius:50px;
+}
+/*--- landing ---*/
+.landing {
+    display: flex;
+    align-items: center;
+    height: 650px;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
+.landing .intro-text {
+    width: 40%;
+    padding: 10% 2% 0 9%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13%;
+}
+.landing .intro-text h1 {
+    font-size: 45px;
+}
+.landing .intro-text p {
+    margin: 25px 0;
+}
+.landing .mockups {
+    height: inherit;
+    width: 60%;
+    background-position: 10% 70%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+.landing .mockups img {
+    position: absolute;
+    width: 95%;
+    top: -104px;
+    left: 164px;
+}
+/*--- Services Section ---*/
+.services {
+    height: auto;
+    width: 100%;
+    background-color: hsl(220, 16%, 96%);
+}
+.services .container ,
+.article .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    justify-content: space-between;
+}
+.container .title {
+    grid-column: span 4;
+    margin-bottom: 50px
+}
+.container .title h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.container .title p {
+    width: 55%;
+}
+.services .container .srv-box ,
+.article .container .card {
+    display: flex;
+    flex-direction: column;
+}
+.services .container .srv-box img {
+    width: 28%;
+    margin-bottom: 30px;
+}
+.services .container .srv-box h3 {
+    font-family: var(--main-font);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.services .container .srv-box p {
+    padding-right: 21px
+}
+/*--- Articles Section ---*/
+.article {
+    height: auto;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
+.article .container .card {
+    margin-right: 20px;
+}
+.article .container .card .image-article {
+    background-size: cover;
+    height: 180px;
+    border-radius:5px 5px 0 0;
+    width: auto;
+    -webkit-border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    -ms-border-radius:5px 5px 0 0;
+    -o-border-radius:5px 5px 0 0;
+}
+.article .container .card .details {
+    background-color: #fff;
+    padding: 25px 14px 25px 25px;
+}
+.article .container .card .details span {
+    font-size: 10px;
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+.article .container .card .details h5 {
+    padding: 15px 0;
+}
+.article .container .card .details p {
+    font-size: 12px;
+}
+.article .container .title {
+    margin-bottom: 18px;
+}
+/*--- Footer ---*/
+footer {
+    background-color: var(--main-color);
+    height: 150px;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    height: inherit;
+}
+footer .container article:last-child {
+    grid-column: slep 4;
+}
+footer .container article {
+    display: flex;
+    flex-direction: column;
+}

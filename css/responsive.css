@@ -1,0 +1,101 @@
+/* Small Screen */
+@media screen and (max-width: 412px) and (min-width:302px) {
+  .container {
+    width: 100%;
+  }
+  header nav .container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  header nav .container .menu ul ,
+  header nav .container .request-invite {
+    display: none;
+  }
+  header nav .container .menu-mobile {
+    display: block;
+  }
+  .request-invite {
+    font-size: 18px;
+  }
+  .landing {
+    flex-direction: column-reverse;
+  }
+  .landing .intro-text ,
+  .landing .mockups {
+    width: 100%;
+  }
+  .landing .mockups {
+    background-image: url(../images/bg-intro-mobile.svg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .landing .mockups img {
+    width: 100%;
+    top: -107px;
+    left: 0;
+  }
+  .landing .intro-text {
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+  }
+  .landing .intro-text h1 {
+    font-size: 35px;
+  }
+  .services .container ,
+  .article .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .container .title {
+    grid-column: auto;
+  }
+  .container .title h1 {
+    font-size: 32px;
+  }
+  .container .title p {
+    width: 100%;
+  }
+  .services .container .srv-box {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .services .container .srv-box img {
+    width: 23%;
+  }
+  .article .container .title {
+    padding-top: 35px;
+    margin-bottom: 10px;
+  }
+  .article .container .card {
+    margin: 10px;
+  }
+  .article .container .card .image-article {
+    height: 220px;
+  }
+  .article .container .card .details {
+    text-align: initial;
+    padding: 25px
+  }
+  .article .container .card .details h5 {
+    font-size: 16px;
+  }
+  .article .container .card .details p {
+    font-size: 13px;
+  }
+}
+/* Medium Screen */
+@media screen and (max-width: 768px) and (min-width: 568px) {
+  
+}
+/*--- Big Screen ----*/
+@media screen and (max-width: 1920px) and (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
