@@ -3,17 +3,17 @@
   .container {
     width: 100%;
   }
-  header nav .container {
+  header .container {
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  header nav .container .menu ul ,
-  header nav .container .request-invite {
+  header .container .menu ul ,
+  header .container .request-invite {
     display: none;
   }
-  header nav .container .menu-mobile {
+  header .container .menu-mobile {
     display: block;
   }
   .request-invite {
@@ -123,7 +123,7 @@
   .request-invite {
     padding: 8px 15px;
   }
-  header nav .container {
+  header .container {
     width: 100% !important;
   }
   .landing {
